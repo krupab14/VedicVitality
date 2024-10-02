@@ -1,0 +1,513 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --white: #fdfaf6;
+    --light-mint: #e4efe7;
+    --dark-green: #064420;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: var(--white);
+    padding: 0 8vw;
+    border-bottom: 0.1rem solid var(--dark-green);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    text-align: right;
+    right: 0;
+    margin-right: 8vw;
+}
+
+.dropdown-menu a {
+    color: black;
+    background-color: white;
+    border-bottom: 0.1rem solid rgb(0, 0, 0, 0.2);
+    padding: 1vh 2vw;
+    width: 30vw;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+}
+
+.links ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.logo a {
+    color: var(--dark-green);
+    text-decoration: none;
+}
+
+.links a {
+    color: var(--dark-green);
+    text-decoration: none;
+    border-radius: 0.9rem;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    margin-top: 20vh;
+    padding: 5vh 5vw;
+    justify-content: center;
+    color: var(--dark-green);
+    background-image: url(./background.jpeg);
+}
+
+.mainsection {
+    color: var(--dark-green);
+}
+
+.mainsection p {
+    background-color: white;
+    padding: 4vh 2vw 0;
+    line-height: 1.5;
+}
+
+.main-button-container {
+    display: flex;
+    background-color: white;
+    padding: 2vh 2vw;
+}
+
+.main-button:hover {
+    background-color: #064420;
+    color: white;
+}
+
+table,
+td,
+th {
+    border: 0.2rem solid var(--dark-green);
+    border-radius: 0.3rem;
+    background-color: var(--light-mint);
+    color: var(--dark-green);
+    font-size: small;
+}
+
+h2 {
+    color: var(--dark-green);
+    text-align: center;
+    padding: 4vh 0;
+}
+
+.shopbutton {
+    text-decoration: none;
+    padding: 1vh 2vw;
+    background-color: var(--dark-green);
+    color: var(--white);
+    border: 0.1rem solid var(--dark-green);
+    border-radius: 0.3rem;
+}
+
+.shopbutton:hover {
+    background-color: var(--white);
+    color: var(--dark-greene);
+}
+
+.contact-container {
+    text-align: center;
+    margin-bottom: 5vh;
+    margin: auto;
+    line-height: 1.5;
+    color: #064420;
+}
+
+.contact-title {
+    border-top: var(--dark-green) solid 2px;
+    padding-top: 2vh;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.contact-email {
+    font-size: 1.5rem;
+    margin-top: 5vh;
+    border-bottom: var(--dark-green) solid 2px;
+    padding-bottom: 2vh;
+}
+
+/* Computer */
+@media only screen and (min-width: 1000px) {
+    nav {
+        height: 12vh;
+        padding: 0 6vw;
+    }
+
+    .hidebtn {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .navbar li {
+        font-size: 1.2rem;
+        margin-right: 2vw;
+    }
+
+    .container {
+        padding: 0 6vw;
+    }
+
+    .main-button {
+        padding: 2vh 3vw;
+        margin-right: 1vw;
+        border: 0.2rem solid var(--dark-green);
+        border-radius: 0.3rem;
+        color: var(--dark-green);
+        text-decoration: none;
+    }
+
+    .mainsection-img img {
+        height: 55vh;
+        width: 60vh;
+    }
+
+    .mainsection-title {
+        font-size: 2rem;
+    }
+
+    .dosha-img {
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+
+    .dosha {
+        height: 35vh;
+    }
+
+    table,
+    td,
+    th {
+        padding: 0.5vw;
+    }
+
+    .shop {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .cards {
+        height: 47vh;
+        width: 20vw;
+        padding: 2vh 1vw;
+        margin: 3vh 0;
+        background-color: var(--light-mint);
+        border: 0.1rem solid var(--dark-green);
+        border-radius: 0.3rem;
+    }
+
+    .cards img {
+        height: 25vh;
+        width: 100%;
+        margin-bottom: 3vh;
+        border-radius: 0.3rem;
+    }
+
+    .contact-container {
+        width: 50vw;
+    }
+
+    hr {
+        margin: 12vh 0;
+    }
+
+    .benefits-title {
+        font-size: 2rem;
+    }
+
+    .benefits-left ul li {
+        margin-left: 2vw;
+        margin-bottom: 2vh;
+    }
+}
+
+/* Mobile Horizontal */
+@media only screen and (max-width: 1000px) {
+    nav {
+        height: 12vh;
+    }
+
+    .main {
+        flex-direction: column-reverse;
+        padding: 8vh 3vw;
+    }
+
+    .hidebtn {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .navbar li {
+        font-size: 1rem;
+        margin-right: 2vw;
+    }
+
+    .navbar li:last-child {
+        margin-right: 1.5vw;
+    }
+
+    .container {
+        padding: 0 8vw;
+    }
+
+    .main-button {
+        padding: 2vh 3vw;
+        margin-right: 1vw;
+        margin-top: 5vh;
+        border: 0.2rem solid var(--dark-green);
+        border-radius: 0.3rem;
+        color: var(--dark-green);
+        text-decoration: none;
+    }
+
+    .mainsection{
+        margin: -2vh;
+        padding: 5vh 5vw;
+    }
+
+    .mainsection-img {
+        text-align: center;
+    }
+
+    .mainsection-img img {
+        height: 40vh;
+        border-radius: 50%; 
+        padding-bottom: 5vh;
+    }
+
+    .mainsection-title {
+        font-size: 2rem;
+    }
+
+    .dosha-img {
+        text-align: center;
+        margin-bottom: vh;
+    }
+
+    .dosha {
+        height: 30vh;
+        margin-bottom: 3vh;
+    }
+
+    table,
+    td,
+    th {
+        padding: 1.4vw;
+    }
+
+    .shop {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .cards {
+        height: 75vh;
+        width: 40vw;
+        padding: 5vh 3vw;
+        margin: auto;
+        margin-bottom: 5vh;
+        background-color: var(--light-mint);
+        border: 0.1rem solid var(--dark-green);
+        border-radius: 0.3rem;
+    }
+
+    .cards img {
+        height: 50vh;
+        width: 100%;
+        margin-bottom: 3vh;
+        border-radius: 0.3rem;
+    }
+
+    .contact-container {
+        margin-bottom: 10vh;
+    }
+
+    hr {
+        margin: 20vh 0;
+    }
+
+    .benefits-title {
+        font-size: 1.8rem;
+    }
+
+    .benefits-left ul li {
+        margin-left: 2vw;
+        margin-bottom: 2vh;
+    }
+}
+
+/* Mobile Vertical */
+@media only screen and (max-width: 800px) {
+    nav {
+        height: 8vh;
+    }
+
+    .main {
+        flex-direction: column-reverse;
+        padding: 3vh 3vw;
+        margin-top: 5vh;
+    }
+
+    .navbtn {
+        display: block;
+        color: white;
+        background-color: #064420;
+        padding: 1.5vh 3vh;
+        border-radius: 0.3rem;
+        font-size: 1rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .navbar li {
+        display: none;
+    }
+
+    .container {
+        padding: 0 2vw;
+    }
+
+    .main {
+        margin-top: 10vh;
+    }
+
+    .main-button-container {
+        flex-direction: column;
+    }
+
+    .main-button {
+        padding: 2vh 3vw;
+        border: 0.2rem solid var(--dark-green);
+        font-size: 1rem;
+        border-radius: 0.3rem;
+        color: var(--dark-green);
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .mainsection-img img {
+        height: 40vh;
+        
+    }
+
+    .mainsection{
+        margin-top: -2vh;
+        padding: 5vh 5vw;
+    }
+
+    .mainsection-title {
+        font-size: 1.6rem;
+    }
+
+    .mainsection p {
+        font-size: 0.9rem;
+    }
+
+    .dosha-img {
+        text-align: center;
+        margin-bottom: 1vh;
+    }
+
+    .dosha {
+        height: 20vh;
+        width: 80vw;
+    }
+
+    table,
+    td,
+    th {
+        padding: 0.2vh;
+    }
+
+    .shop {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .cards {
+        height: 45vh;
+        width: 80vw;
+        padding: 2vh 3vw;
+        margin: auto;
+        margin-bottom: 5vh;
+        background-color: var(--light-mint);
+        border: 0.1rem solid var(--dark-green);
+        border-radius: 0.3rem;
+    }
+
+    .cards img {
+        height: 25vh;
+        width: 100%;
+        margin-bottom: 3vh;
+        border-radius: 0.3rem;
+    }
+
+    hr {
+        margin: 10vh 0;
+    }
+
+    .benefits-title {
+        font-size: 1.5rem;
+    }
+
+    .benefits-left ul li {
+        margin-left: 5vw;
+        margin-bottom: 1vh;
+    }
+}
+
+.benefits-left{
+    background-color: var(--light-mint);
+    padding: 2vh 2vw;
+    border: var(--dark-green) 2px solid;
+    border-radius: 0.3rem;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.benefits-left ul li {
+    line-height: 2;
+    list-style: none;
+    color: var(--dark-green);
+}
+
+.benefits-title {
+    font-weight: 500;
+    color: var(--dark-green);
+    margin-bottom: 5vh;
+    background-color: var(--light-mint);
+}
